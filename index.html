@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>StitchFlow - Tailoring Management</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <h1>🧵 StitchFlow</h1>
+
+            <p>Tailoring Manager</p>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <button
+                class="nav-btn active"
+                data-page="dashboardPage">
+
+                🏠 Dashboard
+
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page="newCustomerPage">
+
+                👤 New Customer
+
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page="customersPage">
+
+                👥 Customers
+
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page="measurementsPage">
+
+                📏 Measurements
+
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page="newOrderPage">
+
+                📦 New Order
+
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page="ordersPage">
+
+                📋 Orders
+
+            </button>
+
+
+            <button
+                class="nav-btn"
+                data-page="dueSoonPage">
+
+                ⏰ Due Soon
+
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-footer">
+
+            <p>🧵 Manage your shop easily</p>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <!-- ================= DASHBOARD PAGE ================= -->
+
+        <section
+            id="dashboardPage"
+            class="page active-page">
+
+
+            <header class="header">
+
+                <div>
+
+                    <h1>Dashboard</h1>
+
+                    <p>
+                        Manage customers, measurements and orders
+                        from one place.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <section class="dashboard">
+
+                <h2>📊 Shop Overview</h2>
+
+
+                <div class="summary">
+
+
+                    <div class="summary-card">
+
+                        <span class="card-icon">👥</span>
+
+                        <div>
+
+                            <h3>Total Customers</h3>
+
+                            <p id="customerCount">0</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="summary-card">
+
+                        <span class="card-icon">📦</span>
+
+                        <div>
+
+                            <h3>Total Orders</h3>
+
+                            <p id="orderCount">0</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="summary-card">
+
+                        <span class="card-icon">✅</span>
+
+                        <div>
+
+                            <h3>Ready Orders</h3>
+
+                            <p id="readyCount">0</p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="summary-card">
+
+                        <span class="card-icon">⏰</span>
+
+                        <div>
+
+                            <h3>Due Soon</h3>
+
+                            <p id="dueSoonCount">0</p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- QUICK ACTIONS -->
+
+            <section class="quick-actions">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>⚡ Quick Actions</h2>
+
+                        <p>
+                            Access important features instantly
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-action-grid">
+
+
+                    <button
+                        class="quick-action-card"
+                        data-page="newCustomerPage">
+
+                        <span class="quick-icon">👤</span>
+
+                        <span class="quick-text">
+
+                            <strong>New Customer</strong>
+
+                            <small>Add a new customer</small>
+
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="quick-action-card"
+                        data-page="measurementsPage">
+
+                        <span class="quick-icon">📏</span>
+
+                        <span class="quick-text">
+
+                            <strong>Add Measurements</strong>
+
+                            <small>Save customer measurements</small>
+
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="quick-action-card"
+                        data-page="newOrderPage">
+
+                        <span class="quick-icon">📦</span>
+
+                        <span class="quick-text">
+
+                            <strong>Create Order</strong>
+
+                            <small>Add a new tailoring order</small>
+
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="quick-action-card"
+                        data-page="customersPage">
+
+                        <span class="quick-icon">👥</span>
+
+                        <span class="quick-text">
+
+                            <strong>View Customers</strong>
+
+                            <small>Search and manage customers</small>
+
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="quick-action-card"
+                        data-page="ordersPage">
+
+                        <span class="quick-icon">📋</span>
+
+                        <span class="quick-text">
+
+                            <strong>View Orders</strong>
+
+                            <small>Check all customer orders</small>
+
+                        </span>
+
+                    </button>
+
+
+
+                    <button
+                        class="quick-action-card"
+                        data-page="dueSoonPage">
+
+                        <span class="quick-icon">⏰</span>
+
+                        <span class="quick-text">
+
+                            <strong>Due Soon</strong>
+
+                            <small>Check upcoming deliveries</small>
+
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================= NEW CUSTOMER PAGE ================= -->
+
+        <section
+            id="newCustomerPage"
+            class="page">
+        
+            <button
+                class="back-arrow"
+                onclick="goBack()">
+
+                 ←
+
+            </button>
+
+
+            <header class="header">
+
+                <div>
+
+                    <h1 id="customerFormTitle">
+                        👤 New Customer
+                    </h1>
+
+                    <p>
+                        Add a new customer to your shop.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <section class="form-section">
+
+                <form id="customerForm">
+
+
+                    <input
+                        type="hidden"
+                        id="editingCustomerId">
+
+
+                    <label>Customer Name</label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        placeholder="Enter customer name"
+                        required>
+
+
+
+                    <label>Phone Number</label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter phone number"
+                        required>
+
+
+
+                    <label>Gender</label>
+
+                    <select
+                        id="gender"
+                        required>
+
+                        <option value="">
+                            Select Gender
+                        </option>
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
+                    </select>
+
+
+
+                    <button
+                        type="submit"
+                        class="save-btn"
+                        id="customerSaveBtn">
+
+                        Save Customer
+
+                    </button>
+
+
+                </form>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================= CUSTOMERS PAGE ================= -->
+
+        <section
+            id="customersPage"
+            class="page">
+
+
+            <header class="header">
+
+                <div>
+
+                    <h1>👥 Customers</h1>
+
+                    <p>
+                        Search and manage your customers.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <section class="content-section">
+
+
+                <input
+                    type="text"
+                    id="customerSearch"
+                    class="search-box"
+                    placeholder="🔎 Search by name or phone">
+
+
+                <div id="customerList">
+
+                    <p class="empty-message">
+                        No customers yet.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================= CUSTOMER DETAILS PAGE ================= -->
+
+        <section
+            id="customerDetailsPage"
+            class="page">
+
+
+            <header class="header">
+
+                <div>
+
+                    <h1>👤 Customer Details</h1>
+
+                    <p>
+                        View measurements and previous orders.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <section class="content-section">
+
+                <div id="customerDetailsContent"></div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================= MEASUREMENTS PAGE ================= -->
+
+        <section
+            id="measurementsPage"
+            class="page">
+
+
+            <header class="header">
+
+                <div>
+
+                    <h1>📏 Customer Measurements</h1>
+
+                    <p>
+                        Save and manage customer measurements.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <section class="form-section">
+
+                <form id="measurementForm">
+
+
+                    <label>Customer</label>
+
+                    <select
+                        id="measurementCustomer"
+                        required>
+
+                        <option value="">
+                            Select Customer
+                        </option>
+
+                    </select>
+
+
+
+                    <label>Garment Type</label>
+
+                    <select
+                        id="garmentType"
+                        required>
+
+                        <option value="">
+                            Select Garment
+                        </option>
+
+                        <option value="Shirt">Shirt</option>
+                        <option value="Pant">Pant</option>
+                        <option value="Kurta">Kurta</option>
+                        <option value="Blouse">Blouse</option>
+                        <option value="Kurti">Kurti</option>
+                        <option value="Dress">Dress</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+
+
+
+                    <div id="measurementFields">
+
+                        <p class="empty-message">
+                            Select a garment to enter measurements.
+                        </p>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="save-btn">
+
+                        Save Measurements
+
+                    </button>
+
+
+                </form>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================= NEW ORDER PAGE ================= -->
+
+        <section
+            id="newOrderPage"
+            class="page">
+
+
+            <header class="header">
+
+                <div>
+
+                    <h1>📦 Create New Order</h1>
+
+                    <p>
+                        Add a new tailoring order.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <section class="form-section">
+
+                <form id="orderForm">
+
+
+                    <label>Customer</label>
+
+                    <select
+                        id="orderCustomer"
+                        required>
+
+                        <option value="">
+                            Select Customer
+                        </option>
+
+                    </select>
+
+
+
+                    <label>Garment Type</label>
+
+                    <select
+                        id="orderGarment"
+                        required>
+
+                        <option value="">
+                            Select Garment
+                        </option>
+
+                        <option value="Shirt">Shirt</option>
+                        <option value="Pant">Pant</option>
+                        <option value="Kurta">Kurta</option>
+                        <option value="Blouse">Blouse</option>
+                        <option value="Kurti">Kurti</option>
+                        <option value="Dress">Dress</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+
+
+
+                    <label>Quantity</label>
+
+                    <input
+                        type="number"
+                        id="quantity"
+                        min="1"
+                        required>
+
+
+
+                    <label>Total Amount</label>
+
+                    <input
+                        type="number"
+                        id="totalAmount"
+                        min="0"
+                        required>
+
+
+
+                    <label>Advance Amount</label>
+
+                    <input
+                        type="number"
+                        id="advance"
+                        min="0"
+                        required>
+
+
+
+                    <label>Delivery Date</label>
+
+                    <input
+                        type="date"
+                        id="deliveryDate"
+                        required>
+
+
+
+                    <label>Order Status</label>
+
+                    <select id="orderStatus">
+
+                        <option value="Received">Received</option>
+                        <option value="Cutting">Cutting</option>
+                        <option value="Stitching">Stitching</option>
+                        <option value="Ready">Ready</option>
+                        <option value="Delivered">Delivered</option>
+
+                    </select>
+
+
+
+                    <button
+                        type="submit"
+                        class="save-btn">
+
+                        Save Order
+
+                    </button>
+
+
+                </form>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================= ORDERS PAGE ================= -->
+
+        <section
+            id="ordersPage"
+            class="page">
+
+
+            <header class="header">
+
+                <div>
+
+                    <h1>📋 Orders</h1>
+
+                    <p>
+                        View and manage all customer orders.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <section class="content-section">
+
+                <div id="orderList">
+
+                    <p class="empty-message">
+                        No orders yet.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- ================= DUE SOON PAGE ================= -->
+
+        <section
+            id="dueSoonPage"
+            class="page">
+
+
+            <header class="header">
+
+                <div>
+
+                    <h1>⏰ Orders Due Soon</h1>
+
+                    <p>
+                        Check upcoming deliveries.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+            <section class="content-section">
+
+                <div id="dueSoonList">
+
+                    <p class="empty-message">
+                        No orders due soon.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                🧵 StitchFlow © 2026
+            </p>
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
